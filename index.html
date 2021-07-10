@@ -33,10 +33,19 @@
 
                     //print the camera position
                     var camearLocation = document.querySelector("a-camera").getAttribute("position")
-                    console.log(camearLocation.x);
+                    console.log("CAMERA X", camearLocation.x);
+                    console.log("CAMERA Y", camearLocation.y);
+                    console.log("CAMERA Z", camearLocation.z);
+
+
 
                     //add our a-entity here?
-                    document.querySelector("a-entity").setAttribute("gps-entity-place", "latitude: 40.68741743907926; longitude: -73.95971446133602");
+                    var aEntity = document.querySelector("gps-entity-place");
+                    
+                    console.log("DEF_LAT", aEntity.getAttribute("latitude"));
+                    aEntity.setAttribute("latitude", 40.68741743907926);
+                    //aEntity.setAttribute("longitude", -73.95971446133602);
+                    console.log("SET_LAT", aEntity.getAttribute("latitude"));
                 });
 
                 //place added
