@@ -32,8 +32,8 @@
                     console.log("gps-camera-origin-coord-set");
 
                     //print the camera position
-                    var camearLocation = document.querySelector("a-camera").getAttribute("position").toString()
-                    console.log(camearLocation);
+                    var camearLocation = document.querySelector("a-camera").getAttribute("position")
+                    console.log(camearLocation.x);
 
                     //add our a-entity here?
                 });
@@ -53,7 +53,7 @@
                     console.log("gps-camera-update-positon", details.position);
                     //print the camera position
                     var camearLocation = document.querySelector("a-camera").getAttribute("position").toString()
-                    console.log(camearLocation);
+                    console.log(camearLocation.x);
                 });
             }
         });
@@ -73,14 +73,15 @@
             <a-asset-item id="animated-asset" src="assets/asset.glb"></a-asset-item>
         </a-assets>
 
-        <a-entity 
+        <a-entity gps-entity-place></a-entity>
+        <!--a-entity 
             animation-mixer="loop: repeat" 
             gltf-model="#animated-asset" 
             scale="0.25 0.25 0.25"
             position="0 0 0"
             look-at="[gps-camera]" 
             gps-entity-place="latitude: 40.68741743907926; longitude: -73.95971446133602">
-        </a-entity>
+        </a-entity-->
         <a-camera gps-camera rotation-reader></a-camera>
         <a-entity camerapositionhandler></a-entity> 
 
