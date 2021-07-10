@@ -54,7 +54,8 @@
                     console.log("SET_LAT", gpsEntityPlace.latitude);
 
                     //what is the distance between camera and place?
-                    console.log("DISTANCE", gpsEntityPlace.distance);
+                    var distanceMsg = document.querySelector('[gps-entity-place]').getAttribute('distanceMsg');
+                    console.log("DISTANCE", distanceMsg);
 
                 });
 
