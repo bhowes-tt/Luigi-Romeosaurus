@@ -27,8 +27,15 @@
                 console.log("Aframe component registration")
 
                 //place added
-                window.addEventListener('gps-camera-origin-coord-set', (details) => {
-                    console.log("gps-camera-origin-coord-set", details);
+                window.addEventListener('gps-camera-origin-coord-set', () => {
+                    //this fired on mobile!  first one to trigger
+                    console.log("gps-camera-origin-coord-set");
+
+                    //print the camera position
+                    var camearLocation = document.querySelector("a-camera").getAttribute("position").toString()
+                    console.log(camearLocation);
+
+                    //add our a-entity here?
                 });
 
                 //place added
@@ -43,7 +50,10 @@
 
                 //camera update position
                 window.addEventListener('gps-camera-update-positon', (details) => {
-                    console.log("gps-camera-update-positon", details);
+                    console.log("gps-camera-update-positon", details.position);
+                    //print the camera position
+                    var camearLocation = document.querySelector("a-camera").getAttribute("position").toString()
+                    console.log(camearLocation);
                 });
             }
         });
