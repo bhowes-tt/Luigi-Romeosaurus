@@ -10,8 +10,8 @@
         <script>
             window.onload = () => {                       
                 navigator.geolocation.getCurrentPosition((position) => {
-                    var dist = document.querySelector('gps-entity-place').getAttribute('distanceMsg');
-                    alert("Lat: " + position.coords.latitude.toString() + "  Long: " + position.coords.longitude.toString() + " ___  " + dist);
+                    //var dist = document.querySelector('gps-entity-place').getAttribute('distanceMsg');
+                    alert("Lat: " + position.coords.latitude.toString() + "  Long: " + position.coords.longitude.toString());
                 });
             }
           </script>
