@@ -10,16 +10,16 @@
         <script>
             window.onload = () => {                       
                 navigator.geolocation.getCurrentPosition((position) => {
-                    var dist = document.querySelector('a-entity').getAttribute('distanceMsg');
-                    alert("Lat: " + position.coords.latitude.toString() + "  Long: " + position.coords.longitude.toString());
+                    //var dist = document.querySelector('a-entity').getAttribute('distanceMsg');
+                    //alert("Lat: " + position.coords.latitude.toString() + "  Long: " + position.coords.longitude.toString());
                 });
             }
           </script>
           <script>
             AFRAME.registerComponent('cameraPositionHandler', {
               init: function () {
-                    this.el.sceneEl.addEventListener('gps-camera-origin-coord-set', (details) => {
-                        console.log(details);
+                    this.el.sceneEl.addEventListener('gps-entity-place-loaded', (details) => {
+                        alert(details);
                     });
                 }
             });
