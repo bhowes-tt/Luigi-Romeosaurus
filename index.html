@@ -23,6 +23,8 @@
         AFRAME.registerComponent('cameraPositionHandler', {
             init: function () {
 
+                console.log("Aframe component registration")
+
                 //place added
                 this.el.sceneEl.addEventListener('gps-camera-origin-coord-set', (details) => {
                     console.log("gps-camera-origin-coord-set", details);
@@ -36,6 +38,11 @@
                 //place update position
                 this.el.sceneEl.addEventListener('gps-entity-place-update-positon', (details) => {
                     console.log("gps-entity-place-update-positon", details);
+                });
+
+                //camera update position
+                this.el.sceneEl.addEventListener('gps-camera-update-positon', (details) => {
+                    console.log("gps-camera-update-positon", details);
                 });
             }
         });
