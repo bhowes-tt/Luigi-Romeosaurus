@@ -32,13 +32,13 @@
                     console.log("gps-camera-origin-coord-set");
 
                     //print the camera position
-                    var camearLocation = document.querySelector("a-camera").getAttribute("position")
-                    console.log("CAMERA X", camearLocation.x);
-                    console.log("CAMERA Y", camearLocation.y);
-                    console.log("CAMERA Z", camearLocation.z);
+                    // var camearLocation = document.querySelector("a-camera").getAttribute("position")
+                    // console.log("CAMERA X", camearLocation.x);
+                    // console.log("CAMERA Y", camearLocation.y);
+                    // console.log("CAMERA Z", camearLocation.z);
 
-                    var gpsCamera = document.querySelector("a-camera").getAttribute("gps-camera")
-                    console.log("GPS CAMERA X", gpsCamera);
+                    // var gpsCamera = document.querySelector("a-camera").getAttribute("gps-camera")
+                    // console.log("GPS CAMERA X", gpsCamera);
                     //console.log("GPS CAMERA Y", gpsCamera.currentCoords.y);
                     //console.log("GPS CAMERA Z", gpsCamera.currentCoords.z);
 
@@ -97,7 +97,7 @@
         </a-assets>
 
         <a-entity 
-            gps-entity-place
+            gps-entity-place="latitude: 40.68741743907926; longitude: -73.95971446133602"
             gltf-model="#animated-asset">
         </a-entity>
         <!--a-entity 
