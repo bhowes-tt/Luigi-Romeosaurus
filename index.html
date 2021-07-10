@@ -40,12 +40,13 @@
 
 
                     //add our a-entity here?
-                    var aEntity = document.querySelector("gps-entity-place");
+                    var gpsEntityPlace = document.querySelector("a-entity").getAttribute("gps-entity-place");
                     
-                    console.log("DEF_LAT", aEntity.getAttribute("latitude"));
-                    aEntity.setAttribute("latitude", 40.68741743907926);
+                    console.log("DEF_LAT", gpsEntityPlace.latitude);
+                    document.querySelector("a-entity").setAttribute("gps-entity-place", "latitude: 40.68741743907926; longitude: -73.95971446133602");
+                    gpsEntityPlace = document.querySelector("a-entity").getAttribute("gps-entity-place");
                     //aEntity.setAttribute("longitude", -73.95971446133602);
-                    console.log("SET_LAT", aEntity.getAttribute("latitude"));
+                    console.log("SET_LAT", gpsEntityPlace.latitude);
                 });
 
                 //place added
