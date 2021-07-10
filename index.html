@@ -10,7 +10,7 @@
         <script>
             window.onload = () => {                       
                 navigator.geolocation.getCurrentPosition((position) => {
-                    document.querySelector("a-entity").setAttribute("gps-entity-place", "latitude: 40.68741743907926; longitude: -73.95971446133602");
+                    //document.querySelector("a-entity").setAttribute("gps-entity-place", "latitude: 40.68741743907926; longitude: -73.95971446133602");
                     //alert("Lat: " + position.coords.latitude.toString() + "  Long: " + position.coords.longitude.toString());
                 });
             }
@@ -42,12 +42,17 @@
                     src="assets/asset.glb"
                 ></a-asset-item>
             </a-assets>
-            <a-entity
+            <a-gltf-model
+                gltf-model="#animated-asset"
+                scale="0.25 0.25 0.25"
+                gps-entity-place="latitude: 40.68741743907926; longitude: -73.95971446133602"
+            ></a-gltf-model>
+            <!-- trying gltf and some other tag types  a-entity
                 animation-mixer="loop: repeat"
                 gltf-model="#animated-asset"
                 scale="0.25 0.25 0.25"
                 gps-entity-place="latitude: 40.68741743907926; longitude: -73.95971446133602"
-            ></a-entity>
+            ></a-entity -->
 
             
         </a-scene>
