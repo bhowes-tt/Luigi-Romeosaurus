@@ -27,22 +27,22 @@
                 console.log("Aframe component registration")
 
                 //place added
-                this.el.sceneEl.addEventListener('gps-camera-origin-coord-set', (details) => {
+                window.addEventListener('gps-camera-origin-coord-set', (details) => {
                     console.log("gps-camera-origin-coord-set", details);
                 });
 
                 //place added
-                this.el.sceneEl.addEventListener('gps-entity-place-added', (details) => {
+                window.addEventListener('gps-entity-place-added', (details) => {
                     console.log("gps-entity-place-added", details);
                 });
 
                 //place update position
-                this.el.sceneEl.addEventListener('gps-entity-place-update-positon', (details) => {
+                window.addEventListener('gps-entity-place-update-positon', (details) => {
                     console.log("gps-entity-place-update-positon", details);
                 });
 
                 //camera update position
-                this.el.sceneEl.addEventListener('gps-camera-update-positon', (details) => {
+                window.addEventListener('gps-camera-update-positon', (details) => {
                     console.log("gps-camera-update-positon", details);
                 });
             }
@@ -51,8 +51,12 @@
 </head>
 
 <body style="margin: 0; overflow: hidden;">
-    <a-scene renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false" embedded
-        loading-screen="enabled: false;" arjs="sourceType: webcam; debugUIEnabled: true;">
+    <a-scene 
+        
+        vr-mode-ui="enabled: false" 
+        embedded
+        loading-screen="enabled: false;" 
+        arjs="sourceType: webcam; debugUIEnabled: false;">
         
 
         <a-assets>
