@@ -10,19 +10,19 @@
         <script>
             window.onload = () => {                       
                 navigator.geolocation.getCurrentPosition((position) => {
-                    //var dist = document.querySelector('a-entity').getAttribute('distanceMsg');
+                    document.querySelector("a-entity").setAttribute("gps-entity-place", "latitude: 40.68741743907926; longitude: -73.95971446133602");
                     //alert("Lat: " + position.coords.latitude.toString() + "  Long: " + position.coords.longitude.toString());
                 });
             }
           </script>
           <script>
-            AFRAME.registerComponent('cameraPositionHandler', {
-              init: function () {
-                    this.el.sceneEl.addEventListener('gps-entity-place-loaded', (details) => {
-                        alert(details);
-                    });
-                }
-            });
+            // AFRAME.registerComponent('cameraPositionHandler', {
+            //   init: function () {
+            //         this.el.sceneEl.addEventListener('gps-entity-place-loaded', (details) => {
+            //             alert(details);
+            //         });
+            //     }
+            // });
           </script>
     </head>
 
