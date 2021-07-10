@@ -32,9 +32,12 @@
                     console.log("gps-camera-origin-coord-set");
 
                     //new attempt - add the a-entity with gps-entity-place properties set in here, after we know the camera has booted
-                    var ent = document.createElement('a-entity');
-                    ent.setAttribute("gps-entity-place", "latitude: 40.68741743907926; longitude: -73.95971446133602");
-                    document.querySelector('a-scene').appendChild(ent);
+                    if(!document.querySelector('a-entity') == null){
+                        var ent = document.createElement('a-entity');
+                        ent.setAttribute("gps-entity-place", "latitude: 40.68741743907926; longitude: -73.95971446133602");
+                        document.querySelector('a-scene').appendChild(ent);
+                    }
+                    
 
 
                     //old stuff below
