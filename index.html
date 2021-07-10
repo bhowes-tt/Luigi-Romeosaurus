@@ -37,6 +37,11 @@
                     console.log("CAMERA Y", camearLocation.y);
                     console.log("CAMERA Z", camearLocation.z);
 
+                    var gpsCamera = document.querySelector("a-camera").getAttribute("gps-camera")
+                    console.log("GPS CAMERA X", gpsCamera.currentCoords.x);
+                    console.log("GPS CAMERA Y", gpsCamera.currentCoords.y);
+                    console.log("GPS CAMERA Z", gpsCamera.currentCoords.z);
+
 
 
                     //can we set properties on our overlay model here?
@@ -49,7 +54,7 @@
                     console.log("SET_LAT", gpsEntityPlace.latitude);
 
                     //what is the distance between camera and place?
-                    console.log("DISTANCE", gpsEntityPlace.distanceMsg);
+                    console.log("DISTANCE", gpsEntityPlace.distance);
 
                 });
 
