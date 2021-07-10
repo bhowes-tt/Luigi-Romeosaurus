@@ -39,7 +39,7 @@
 
 
 
-                    //add our a-entity here?
+                    //can we set properties on our overlay model here?
                     var gpsEntityPlace = document.querySelector("a-entity").getAttribute("gps-entity-place");
                     
                     console.log("DEF_LAT", gpsEntityPlace.latitude);
@@ -47,6 +47,10 @@
                     gpsEntityPlace = document.querySelector("a-entity").getAttribute("gps-entity-place");
                     //aEntity.setAttribute("longitude", -73.95971446133602);
                     console.log("SET_LAT", gpsEntityPlace.latitude);
+
+                    //what is the distance between camera and place?
+                    console.log("DISTANCE", gpsEntityPlace.distanceMsg);
+
                 });
 
                 //place added
