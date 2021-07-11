@@ -16,6 +16,11 @@
 
                 //log the current position 
                 console.log("Lat: " + position.coords.latitude.toString() + "  Long: " + position.coords.longitude.toString());
+
+                //set the simulate attributes on the camera?
+                document.querySelector('[gps-camera]').setAttribute('simulateLatitude', position.coords.latitude);
+                document.querySelector('[gps-camera]').setAttribute('simulateLongitude', position.coords.longitude);
+                console.log("SIMULATED LAT", document.querySelector('[gps-camera]').getAttribute('simulateLongitude'));
             });
         }
     </script>
@@ -91,10 +96,10 @@
 
                 //camera update position
                 window.addEventListener('gps-camera-update-positon', (details) => {
-                    console.log("gps-camera-update-positon", details.position);
+                    console.log("gps-camera-update-positon", details.position.x);
                     //print the camera position
-                    var camearLocation = document.querySelector("a-camera").getAttribute("position").toString()
-                    console.log(camearLocation.x);
+                    //var camearLocation = document.querySelector("a-camera").getAttribute("position").toString()
+                    //console.log(camearLocation.x);
                 });
             }
         });
@@ -128,8 +133,7 @@
         </a-entity-->
         <a-camera 
             gps-camera 
-            rotation-reader
-            gpsTimeInterval="100">
+            rotation-reader>
         </a-camera>
         <a-entity camerapositionhandler></a-entity> 
 
