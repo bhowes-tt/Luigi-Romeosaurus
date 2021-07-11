@@ -6,6 +6,24 @@
         <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+
+        <script>
+            AFRAME.registerComponent('markerceratops', {
+                init: function () {
+
+                    //listen for marker found event
+                    window.addEventListener('markerFound', () => {
+                        console.log("MARKER_FOUND");
+                    });
+
+                    //listen for marker lost event
+                    window.addEventListener('markerLost', () => {
+                        console.log("MARKER_LOST");
+                    });
+
+                }
+            });
+        </script>
     </head>
 
     <body style="margin: 0; overflow: hidden;">
@@ -46,6 +64,7 @@
             </a-marker>
 
             <a-entity camera></a-entity>
+            <a-entity markerceratops></a-entity>
         </a-scene>
     </body>
 </html>
